@@ -41,6 +41,22 @@ launch ec2 | host2 | t2 micro | same keypair
 sudo nano hosts
 ```
 ```
+[all]
+
+[webservers]
+13.201.104.118
+
+[dbservers]
+65.2.69.215
+
+[dev]
+13.201.104.118
+
+[qa]
+65.2.69.215
+
+[test]
+65.2.69.215
 ```
 
 // copy your keypair and save it  and  then paste path of it in ansible.cfg. 
