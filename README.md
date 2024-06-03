@@ -1,9 +1,17 @@
-Clone this Code
+0. Clone this Code
 ```
-gitr clone https://github.com/atulkamble/ansible-ec2.git
+git clone https://github.com/atulkamble/ansible-ec2.git
 cd ansible-ec2
 ```
-// Check file-tree
+
+// sign in as root | Server-machine
+```
+sudo -i passwd
+// enter password 2 times
+su
+```
+
+1. // Check file-tree
 tree
 ```
 .
@@ -17,7 +25,7 @@ tree
 │   └── ping.yml
 └── roles
 ```
-// Ansible.cfg
+2. // Ansible.cfg
 ```
 [defaults]
 inventory = ./inventory
@@ -32,11 +40,11 @@ become_method = sudo
 become_user = root
 become_ask_pass = false
 ```
-// launch host machines
+3. // launch host machines
 launch ec2 | host1 | t2 micro | same keypair
 launch ec2 | host2 | t2 micro | same keypair
 
-// copy public ip machine and paste it in inventory/host file
+4. // copy public ip machine and paste it in inventory/host file
 ```
 sudo nano hosts
 ```
@@ -59,15 +67,10 @@ sudo nano hosts
 65.2.69.215
 ```
 
-// copy your keypair and save it  and  then paste path of it in ansible.cfg. 
+5. // copy your keypair and save it  and  then paste path of it in ansible.cfg. 
 
-// sign in as root | Server-machine
-```
-sudo -i passwd
-// enter password 2 times
-su
-```
-// then try for following commands
+
+6. // then try for following commands
 ```
 ansible all --list-hosts
 ansible webservers --list-hosts
@@ -76,7 +79,7 @@ ansible dev --list-hosts
 ansible test --list-hosts
 ansible qa --list-hosts
 
-// check host connection
+7. // check host connection
 ```
 ansible all -m ping
 ```
