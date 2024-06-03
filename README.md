@@ -5,7 +5,7 @@ cd ansible-ec2
 ```
 // Check file-tree
 tree
-
+```
 .
 ├── ansible.cfg
 ├── aws
@@ -16,7 +16,7 @@ tree
 ├── playbooks
 │   └── ping.yml
 └── roles
-
+```
 // Ansible.cfg
 ```
 ```
