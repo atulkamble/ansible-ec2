@@ -19,6 +19,18 @@ tree
 ```
 // Ansible.cfg
 ```
+[defaults]
+inventory = ./inventory
+remote_user = ec2-user
+private_key_file= aws/aws_keys/ansible.pem
+host_key_checking=False
+retry_files_enabled=False
+
+[privilege_escalation]
+become = true
+become_method = sudo
+become_user = root
+become_ask_pass = false
 ```
 // launch host machines
 launch ec2 | host1 | t2 micro | same keypair
